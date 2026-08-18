@@ -8,6 +8,8 @@ import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 const App = () => {
 
 let username="Shanmukh"
+let arr=[1,2,3]
+let  num=23
 
   return (
    <>
@@ -15,7 +17,8 @@ let username="Shanmukh"
 
     <Routes>
   {/* {firstanme:"Shanmukh"} */}
-      <Route path='/' element={<Home firstname={username} />} />
+  {/* {username:"Shanmukh"} */}
+      <Route path='/' element={<Home username={username} arr={arr} num={num} />} />
       
       <Route path='/services' element={<Services />} />
       

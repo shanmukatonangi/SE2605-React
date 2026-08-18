@@ -1,7 +1,24 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const Home = (pubg) => {
+const Home = (props) => {
+    console.log(props)
+
+    // props={username: 'Shanmukh', arr: Array(3), num: 23}
+
+//    props={
+//         username:"Shanmukh"
+//     }
+    
+
+// let details={
+//     name:"Shnamukh",
+//     dept:"cse"
+// }
+
+// let {name,dept}=details
+
+
 
     // console.log(props)
   //  pubg= {firstanme:"Shanmukh"} 
@@ -14,7 +31,7 @@ const Home = (pubg) => {
     <div>
 
         <Navbar  />
-     hello {pubg.firstname}
+     hello {props.username}
 
       
     </div>
