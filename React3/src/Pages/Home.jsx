@@ -1,12 +1,20 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const Home = () => {
+const Home = (pubg) => {
+
+    // console.log(props)
+  //  pubg= {firstanme:"Shanmukh"} 
+
+
+    // props={
+    //     username:"Shanmukh"
+    // }
   return (
     <div>
 
-        <Navbar />
-      im home page
+        <Navbar  />
+     hello {pubg.firstname}
 
       
     </div>
@@ -14,3 +22,12 @@ const Home = () => {
 }
 
 export default Home
+
+
+
+
+// function Greet(props){
+//     console.log(props)
+// }
+
+// Greet("Shanmukh")

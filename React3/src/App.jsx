@@ -6,13 +6,16 @@ import Services from './Pages/Services'
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 
 const App = () => {
+
+let username="Shanmukh"
+
   return (
    <>
    <Router>
 
     <Routes>
- 
-      <Route path='/' element={<Home />} />
+  {/* {firstanme:"Shanmukh"} */}
+      <Route path='/' element={<Home firstname={username} />} />
       
       <Route path='/services' element={<Services />} />
       
