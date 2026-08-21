@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./App.css"
 
 const App = () => {
   let [task,setTask]=useState("")
@@ -31,18 +32,31 @@ function Add(){
  // todoitems.push({task:task})
 
 }
+function Delete(taskname){
+  //taskname=playcricket
+  //study react != play cricket
+  //study js  != play cricket
+  //play cricket != playcricket  false
+  let updatedtodos=todoitems.filter((todoitem)=> todoitem.task != taskname)
+setTodoitems(updatedtodos)
+
+}
 
   return (
-    <div>
+    <div id='todobox'>
       {/* <h1>{count}</h1>
       <button onClick={Counter}>+</button> */}
-      <input value={task} onChange={handlechange}/>
-      <button onClick={Add}>Add</button>
-      <ul>
-        {todoitems?.map((todo)=>
-          <li>{todo.task}</li>
+      <input id='taskadd'  value={task} onChange={handlechange}/>
+      {/* <input  /> */}
+      <button id='addbutton' onClick={Add}>Add</button>
+      <div id='todoitemsbox'>
+        {todoitems.map((todo)=>
+         (<div className='cards'>
+         <h1>{todo.task} {todo.time}</h1>
+         <button onClick={()=>Delete(todo.task)}>delete</button>
+         </div> )
         )}
-      </ul>
+      </div>
       {/* [<li>study react</li>,<li>study js</li>] */}
 
 
